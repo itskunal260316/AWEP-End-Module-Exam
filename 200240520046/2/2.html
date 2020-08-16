@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script src="2.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar bg-warning navbar-expand sticky-top">
+        <a class="navbarbrand nav-link" href="#">FORMVALIDATION </a>
+        <ul class="navbar-nav ml-auto ">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#">Help</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#">About</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="jumbotron d-flex justify-content-center align-items-center">
+        <h2>VALIDATION</h2>
+    </div>
+    <div class="container col-4 bg-light mt-1 p-5" style="flex-direction: column;">
+
+        <form class="form-group">
+
+            <div class="form-group">
+                <label for="userName" id="username-label">Username :</label>
+                <input type="text" class="form-control" placeholder="Enter username Here !!!" id="userName"
+                    aria-describedby="username-label" required autofocus>
+                <small id="userMsg">No capital letters allowed in userName</small>
+            </div>
+
+
+            <div class="form-group">
+                <label for="userName" id="username-label">Email ID :</label>
+                <input type="email" class="form-control" placeholder="Enter Email ID Here !!!" id="email"
+                    aria-describedby="username-label" required>
+                <small id="emailMsg">We will not share any private data </small>
+            </div>
+
+
+            <div class="form-group mb-5">
+                <label for="userName" id="username-label">Password :</label>
+                <input type="password" class="form-control" placeholder="Enter Password Here !!!" id="pass"
+                    aria-describedby="username-label" minlength="8" maxlength="32" required>
+                <small id="passMsg">Password Length 8 - 32 characters</small>
+            </div>
+
+            <div class="form-group">
+                <button type="button" onclick="validation()"
+                    class="btn btn-md btn-block bg-primary mt-5">SUBMIT</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div id="op-con" class="container col-4 bg-light mt-1 p-5" style="flex-direction: column; visibility: hidden;">
+
+        <div class="jumbotron d-flex justify-content-center align-items-center">
+            <h2>Output</h2>
+        </div>
+
+        <div class="row mb-5" id="form-group">
+            <div id="userNLabel" class="col-4 bg-success">Username : </div>
+            <div id="userN" class="col-8 bg-warning">itskunal</div>
+        </div>
+
+        <div class="row mb-5" id="form-group">
+            <div id="userNLabel" class="col-4 bg-success">Email ID : </div>
+            <div id="userN" class="col-8 bg-warning">vader3430@gmail.com</div>
+        </div>
+
+        <div class="row mb-5" id="form-group">
+            <div id="userNLabel" class="col-4 bg-success">Password : </div>
+            <div id="userN" class="col-8 bg-warning">123456 </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
